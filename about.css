@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+    
+* {
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 400;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.bg {
+    background-image: url(AdobeStock_425512653.jpeg);
+
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+	--characters: 79;
+	--typingSpeed: 7s;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1em;
+}
+
+.container .text {
+	position: absolute;
+    right: 40%;
+}
+
+.container .text::before, .container .text::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.container .text::before {
+	background: rgba(48,46,52,1);
+	animation: typing var(--typingSpeed) steps(var(--characters)) 2s infinite;
+}
+
+.container .text::after {
+	background: green;
+	width: 1ch;
+	animation: typing var(--typingSpeed) steps(var(--characters)) 2s infinite, blinking 0.25s ease alternate infinite;
+}
+
+@keyframes blinking {
+	to {
+		background: transparent;
+	}
+}
+
+@keyframes typing {
+	80%, 100% {
+		left: 100%;
+	}
+}
+
+#nextSection {
+    height: 100%;
+    
+    background: url(bg_two.jpeg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+.glow {
+    position: relative;
+    top: 44%;
+    left: 33%;
+}
+
+.neon {
+    color: #fff;
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 40px #0ff,
+      0 0 80px #0ff,
+      0 0 90px #0ff,
+      0 0 100px #0ff,
+      0 0 150px #0ff;
+  }
+
+  #nextSection > div > h1 > a::after {
+    color: #fff;
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 40px #0ff,
+      0 0 80px #0ff,
+      0 0 90px #0ff,
+      0 0 100px #0ff,
+      0 0 150px #0ff;
+  }
+
+  #third {
+    height: 100%;
+    background: url(bg_three.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .frosty-box {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.3em;
+    padding: 1em;
+    /* width: 50%;
+    height: 50%; */
+    flex-basis: 50%;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .15);
+    
+    backdrop-filter: blur(30px);
+  }
+
+
