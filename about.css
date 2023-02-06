@@ -8,7 +8,7 @@
 body, html {
     height: 100%;
     margin: 0;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
 }
@@ -17,14 +17,25 @@ body::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
 }
 
+.disclaimer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > div.disclaimer > a {
+    padding: 12px;
+}
+
 .bg {
     background-image: url(AdobeStock_425512653.jpeg);
-
     height: 100%;
-
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
@@ -34,11 +45,8 @@ a {
 .container {
 	--characters: 79;
 	--typingSpeed: 7s;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1em;
+	width: 100%;		
+	font-size: 1vw;
 }
 
 .container .text {
@@ -78,20 +86,19 @@ a {
 	}
 }
 
+.black {
+    height: 100%;
+    background: black;
+}
+
 #nextSection {
     height: 100%;
-    
     background: url(bg_two.jpeg);
-
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.responsive {
-    width: 100%;
-    height: auto;
-}
 
 .glow {
     position: relative;
